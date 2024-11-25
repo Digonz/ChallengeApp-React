@@ -29,8 +29,7 @@ const DataTable = () => {
   };
 
   // ELIMINAR
-  const handleDelete = (id,nombre) => {
-    const data = {id:id, nombre:nombre}
+  const handleDelete = (data) => {
     dispatch(deleteData(data));
   };
 
@@ -63,7 +62,7 @@ const DataTable = () => {
                                 <td className={index % 2 === 0 ? 'ps-2 border-end bg-even' : 'ps-2 border-end'}>{item.nombre}</td>
                                 <td className={index % 2 === 0 ? 'ps-2 border-end bg-even' : 'ps-2 border-end'}>{item.descripcion}</td>
                                 <td className={index % 2 === 0 ? 'ps-2 border-end bg-even' : 'ps-2 border-end'}>
-                                    <button className="link ps-2" onClick={() => handleDelete(item.id,item.nombre)}>Eliminar</button>
+                                    <button className="link ps-2" onClick={() => handleDelete(item)}>Eliminar</button>
                                 </td>
                             </tr>
                         ))
