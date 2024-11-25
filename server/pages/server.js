@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 
 
 // SET DATOS
-app.get('/api/getdatatable', (req, res) => {
+app.get('/api/getDataTable', (req, res) => {
   const data = [
     { id: 1, nombre: 'POST 1', descripcion: 'Descripción 1' },
     { id: 2, nombre: 'POST 2', descripcion: 'Descripción 2' },
